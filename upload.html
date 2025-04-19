@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Toolkit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f3f4f6;
+            color: #fff;
+        }
+
+        .hero {
+            position: relative;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #4f46e5 0%, #818cf8 100%);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI3NjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMCAwaDEwMHY1MEgwek0xMDAgMGgxMDB2MTAwSDB6TTIwMCAwaDEwMHYxNTBIMHpNMzAwIDBoMTAwdjIwMEgwek00MDAgMGgxMDB2MjUwSDB6TTUwMCAwaDEwMHYzMDBIMHpNNjAwIDBoMTAwdjM1MEgwek03MDAgMGgxMDB2NDAwSDB6TTgwMCAwaDEwMHY0NTBIMHpNOTAwIDBoMTAwdjUwMEgwek0xMDAwIDBoMTAwdjU1MEgwek0xMTAwIDBoMTAwdjYwMEgwek0xMjAwIDBoMTAwdjY1MEgwek0xMzAwIDBoMTAwdjcwMEgwek0xNDAwIDBoMTAwdjc1MEgweiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=');
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #e0e7ff;
+        }
+
+        .upload-btn {
+            background-color: #fff;
+            color: #4f46e5;
+            border: none;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .upload-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            background-color: #f0f0ff;
+        }
+
+        .upload-btn i {
+            margin-right: 10px;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>The Ultimate PDF Toolkit</h1>
+            <p>Edit, convert, and manage your documents with our powerful suite of PDF tools. Fast, secure, and easy to
+                use.
+            </p>
+            <label for="fileInput" class="upload-btn">
+                <i class="fa-solid fa-upload"></i> Upload Your Files
+            </label>
+
+            <input type="file" id="fileInput" />
+        </div>
+    </section>
+
+    <script type="module" src="./src/js/upload.js"></script>
+</body>
+
+</html>

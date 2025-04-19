@@ -1,0 +1,12 @@
+{
+  "name": "pdf-toolkit-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for PDF Toolkit application",
+  "scripts": {
+    "dev": "serve .",
+    "build": "mkdir -p dist && cp -r *.html src dist/"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

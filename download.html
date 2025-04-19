@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Download Ready - PDF Toolkit</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Styles for the download page */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #4f46e5 0%, #818cf8 100%);
+      color: #fff;
+      overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI3NjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMCAwaDEwMHY1MEgwek0xMDAgMGgxMDB2MTAwSDB6TTIwMCAwaDEwMHYxNTBIMHpNMzAwIDBoMTAwdjIwMEgwek00MDAgMGgxMDB2MjUwSDB6TTUwMCAwaDEwMHYzMDBIMHpNNjAwIDBoMTAwdjM1MEgwek03MDAgMGgxMDB2NDAwSDB6TTgwMCAwaDEwMHY0NTBIMHpNOTAwIDBoMTAwdjUwMEgwek0xMDAwIDBoMTAwdjU1MEgwek0xMTAwIDBoMTAwdjYwMEgwek0xMjAwIDBoMTAwdjY1MEgwek0xMzAwIDBoMTAwdjcwMEgwek0xNDAwIDBoMTAwdjc1MEgweiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=');
+      opacity: 0.05;
+      z-index: 0;
+    }
+
+    .container {
+      text-align: center;
+      z-index: 1;
+      max-width: 700px;
+      animation: slideUp 1s ease-out;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      color: #e0e7ff;
+    }
+
+    .download-btn {
+      background-color: #fff;
+      color: #4f46e5;
+      border: none;
+      padding: 16px 30px;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .download-btn:hover {
+      transform: translateY(-4px);
+      background-color: #f0f0ff;
+    }
+
+    .download-btn i {
+      margin-right: 10px;
+    }
+
+    .home-link {
+      margin-top: 20px;
+      display: inline-block;
+      color: #e0e7ff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    .home-link:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .download-btn {
+        padding: 12px 24px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Your file is ready! 🎉</h1>
+    <p>Click the button below to download it.</p>
+    <a id="downloadLink" href="#">
+      <button class="download-btn">
+        <i class="fa-solid fa-download"></i> Download Now
+      </button>
+    </a>
+    <div>
+      <a href="index.html" class="home-link">
+        <i class="fa-solid fa-home"></i> Return to Home
+      </a>
+    </div>
+  </div>
+
+  <!-- Confetti Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script type="module" src="./src/js/download.js"></script>
+</body>
+</html>
